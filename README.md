@@ -21,7 +21,7 @@ npm run build --report
 npm run unit
 
 # run e2e tests
-npm run e2ehhhhhh
+npm run e2ehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhgit
 
 # run all tests
 npm test
