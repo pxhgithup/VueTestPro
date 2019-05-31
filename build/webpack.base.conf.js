@@ -43,7 +43,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader']
+        loaders: ['style-loader','css-loader'],
+        include: __dirname
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

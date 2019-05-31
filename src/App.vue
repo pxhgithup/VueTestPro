@@ -1,64 +1,64 @@
 <template>
-  <div id="app">
-    <div class="mclick1">点击跳转</div>
-    <div class="child-content">
-      <span class="getchild-data" @click="getChildData()">获取子组件数据</span><span class="getchild-right"></span>
-    </div>
-    <mt-button type="primary" size="large">MintUi</mt-button>
+  <div class="comm-container">
+    <mt-header class="mint-header" fixed
+               title="头部共用标题栏"></mt-header>
+    <div class="app-content">11111</div>
+    <nav class="mui-bar mui-bar-tab">
+      <a class="mui-tab-item mui-active" href="#tabbar">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+      </a>
+      <a class="mui-tab-item" href="#tabbar-with-chat">
+        <span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+        <span class="mui-tab-label">消息</span>
+      </a>
+      <a class="mui-tab-item" href="#tabbar-with-contact">
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">通讯录</span>
+      </a>
+      <a class="mui-tab-item" href="#tabbar-with-map">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">我的</span>
+      </a>
+    </nav>
 
-     <!--<router-link to="/goodslist">111111111111111</router-link>
-      <router-link to="/account">22222222222222222</router-link>
-      <router-view></router-view>
--->
   </div>
 </template>
 
 <script>
-  import test, {hello} from './assets/js/test';
+
   export default {
     name: 'App',
     data() {
-      return {}
+      return {
+        selected: 'selected'
+      }
     },
     methods: {
-      getChildData() {
-        console.log("获取子组件数据" + JSON.stringify(test.cs) + hello);
+      selectPage(page) {
+        if (page == "home") {
+
+        }
+
       }
     }
+
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  #app
-    font-family: 'Avenir', Helvetica, Arial, sans-serif
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    text-align: center
-    color: #2c3e50
-    margin-top: 60px
+  * {
+    margin 0
+    padding 0
+  }
 
-    .mclick1
+  .comm-container
+    .app-content
+      margin-top 40px
+      background bisque
+      height 50px
       width 100%
-      height 2rem
-      line-height 2rem
-      color #fff
-      background #2c3e50
-      margin auto
 
 
-    .child-content
-      width 100%
-      height 2rem
-      line-height 2rem
-      margin-top 1rem
 
-      .getchild-data
-        width 50%
-        color #fff
-        background #2c3e50
-        display block
-
-      .getchild-right
-        width 50%
-        display block
 </style>
